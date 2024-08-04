@@ -13,10 +13,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 800px;
+    width: 600px;
     height: 600px;
     border: 2px solid rgb(0, 0, 0);
-    
+    border-radius: 14px;
 }
 
 /* .operators {
@@ -33,7 +33,7 @@ body {
     height: 50px;
     margin-bottom: 20px;
     border: 1px solid black;
-    border-radius: 4px;
+    border-radius: 14px;
     font-size: 24px;
     font-weight: bold;
 }
@@ -42,10 +42,23 @@ button {
     width: 80px;
     height: 80px;
     border: 1px solid black;
-    border-radius: 4px;
+    border-radius: 14px;
     margin: 4px;
     font-size: 24px;
     font-weight: bold;
+    cursor: pointer;
+    background-color: #04AA6D;
+    box-shadow: 0 5px #999;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
 }
 
 #add {
