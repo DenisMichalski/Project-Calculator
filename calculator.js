@@ -1,5 +1,5 @@
 // DOM-ELEMENTS
-const display = document.querySelector("display");
+const display = document.querySelector(.)
 const numberButtons = document.querySelectorAll(".numberButton");
 
 // FUNCTIONS FOR CALULATIONS
