@@ -51,3 +51,16 @@ numberButtons.forEach((button) => {
     calulatorDisplay = firstNumber + secondNumber;
   });
 });
+
+function updateDisplay() {
+  document.getElementById('display').textContent = displayValue;
+}
+
+function inpuNumber(num) {
+  if (displayValue === '0') {
+    displayValue = num.toString();
+  } else {
+    displayValue += num.toString();
+  }
+  updateDisplay();
+}
