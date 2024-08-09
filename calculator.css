@@ -30,10 +30,14 @@ body {
     margin-bottom: 20px;
     border: 1px solid black;
     border-radius: 14px;
-    font-size: 34px;
     font-weight: bold;
     background-color: white;
     color: black;
+    font-size: 2em; 
+    overflow: hidden; 
+    text-align: right; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
 }
 
 button {
