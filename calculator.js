@@ -1,38 +1,49 @@
+// DOM-ELEMENTS
+const display = document.querySelector("display");
+const numberButtons = document.querySelectorAll(".numberButton");
+
+// FUNCTIONS FOR CALULATIONS
 function add(a, b) {
-    return a + b;
+  return a + b;
 }
 
 function subtract(a, b) {
-    return a - b;
+  return a - b;
 }
 
 function multiply(a, b) {
-    return a * b;
+  return a * b;
 }
 
 function divide(a, b) {
-    return a / b;
+  return a / b;
 }
 
-// console.log(add(2, 3));
-// console.log(subtract(10, 4));
-// console.log(multiply(5, 4));
-// console.log(divide(50, 10));
+// VARIABLES TO UPDATE ON DISPLAY
 
+let firstNumber = "";
+let operator = "";
+let secondNumber = "";
 
-let firstNumber;
-let secondNumber;
-let operator = [add, subtract, multiply, divide];
-
-
-function operate() {
-    if (operator === add) {
-        firstNumber += secondNumber;
-    } else if (operator === subtract) {
-        return firstNumber -= secondNumber;
-    } else if (operator === multiply) {
-        return firstNumber *= secondNumber;
-    } else {
-        return firstNumber /= secondNumber;
-    }
+// FUNCTION FOR MATHEMATICAL OPERATIONS
+function operate(num1, num2, operator) {
+  switch (operator) {
+    case "+":
+      return add(num1, num2);
+      break;
+    case "-":
+      return subtract(num1, num2);
+      break;
+    case "*":
+      return multiply(num1, num2);
+    case "/":
+      return divide(num1, num2);
+  }
 }
+
+numberButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    console.log('clicked');
+  });
+})
+

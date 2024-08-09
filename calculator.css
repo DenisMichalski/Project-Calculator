@@ -19,13 +19,6 @@ body {
     border-radius: 14px;
 }
 
-/* .operators {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: end;
-    
-} */
 
 #display {
     text-align: end;
@@ -61,21 +54,10 @@ button:active {
     transform: translateY(4px);
 }
 
-#add {
+#operator {
     background-color: rgb(245, 175, 46);
 }
 
-#subtract {
-    background-color: rgb(245, 175, 46);
-}
-
-#multiply {
-    background-color: rgb(245, 175, 46);
-}
-
-#divide {
-    background-color: rgb(245, 175, 46);
-}
 
 #clear {
     background-color: rgb(201, 12, 12);
