@@ -54,7 +54,7 @@ button:active {
     transform: translateY(4px);
 }
 
-#operator {
+.operatorButton {
     background-color: rgb(245, 175, 46);
 }
 

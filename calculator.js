@@ -1,6 +1,10 @@
 // DOM-ELEMENTS
-const display = document.querySelector(.)
+const calulatorDisplay = document.querySelector(".calculatorDisplay");
 const numberButtons = document.querySelectorAll(".numberButton");
+const operatorButton = document.querySelectorAll(".operatorButton");
+const decimalButton = document.querySelector(".decimalButton");
+const clearButton = document.querySelector(".clearButton");
+const equalsButton = document.querySelector(".equalsButton");
 
 // FUNCTIONS FOR CALULATIONS
 function add(a, b) {
@@ -24,6 +28,7 @@ function divide(a, b) {
 let firstNumber = "";
 let operator = "";
 let secondNumber = "";
+let displayValue = 0;
 
 // FUNCTION FOR MATHEMATICAL OPERATIONS
 function operate(num1, num2, operator) {
@@ -41,9 +46,8 @@ function operate(num1, num2, operator) {
   }
 }
 
-numberButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    console.log('clicked');
+numberButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    calulatorDisplay = firstNumber + secondNumber;
   });
-})
-
+});
