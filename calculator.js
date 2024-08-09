@@ -1,5 +1,5 @@
 // DOM-ELEMENTS
-const calulatorDisplay = document.querySelector(".calculatorDisplay");
+const calculatorDisplay = document.querySelector(".calculatorDisplay");
 const numberButtons = document.querySelectorAll(".numberButton");
 const operatorButton = document.querySelectorAll(".operatorButton");
 const decimalButton = document.querySelector(".decimalButton");
@@ -23,12 +23,12 @@ function divide(a, b) {
   return a / b;
 }
 
-// VARIABLES TO UPDATE ON DISPLAY
+// VARIABLES TO UPDATE THE DISPLAY
 
 let firstNumber = "";
 let operator = "";
 let secondNumber = "";
-let displayValue = 0;
+let displayValue = "";
 
 // FUNCTION FOR MATHEMATICAL OPERATIONS
 function operate(num1, num2, operator) {
@@ -48,15 +48,16 @@ function operate(num1, num2, operator) {
 
 numberButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    calulatorDisplay = firstNumber + secondNumber;
+    displayValue += button.textContent; // Add the number to displayValue
+    updateDisplay(); // Update the display with the new value
   });
 });
 
 function updateDisplay() {
-  document.getElementById('display').textContent = displayValue;
+  calculatorDisplay.textContent = displayValue; // Update the actual display element
 }
 
-function inpuNumber(num) {
+function inputNumber(num) {
   if (displayValue === '0') {
     displayValue = num.toString();
   } else {
